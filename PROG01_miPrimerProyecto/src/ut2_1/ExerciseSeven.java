@@ -20,6 +20,7 @@ import java.util.Scanner;
  */
 
 public class ExerciseSeven {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 
@@ -31,8 +32,13 @@ public class ExerciseSeven {
       double cotizacionDolar = sc.nextDouble();
 
       double equivalenciaDolares = euros * cotizacionDolar;
-      System.out.println("La equivalencia en dólares es: " + equivalenciaDolares);
 
+      double equivalenciaDolaresRedondeada =
+        Math.round(equivalenciaDolares * 100.0) / 100.0;
+
+      System.out.println(
+        "La equivalencia en dólares es: " + equivalenciaDolaresRedondeada
+      );
     } catch (InputMismatchException e) {
       System.out.println("Por favor, ingrese números válidos.");
     } finally {
