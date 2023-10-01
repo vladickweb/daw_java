@@ -19,25 +19,24 @@ public class PROG02_Ej6 {
     int baseDatosAlumnos = scanner.nextInt();
 
     int totalAlumnos = programacionAlumnos + entornosAlumnos + baseDatosAlumnos;
-    double porcentajeProgramacion = (double) programacionAlumnos /
-    totalAlumnos *
-    100;
-    double porcentajeEntornos = (double) entornosAlumnos / totalAlumnos * 100;
-    double porcentajeBaseDatos = (double) baseDatosAlumnos / totalAlumnos * 100;
 
-    System.out.printf(
-      "Porcentaje de alumnos en Programación: %.1f%%\n",
-      porcentajeProgramacion
-    );
-    System.out.printf(
-      "Porcentaje de alumnos en Entornos de Desarrollo: %.1f%%\n",
-      porcentajeEntornos
-    );
-    System.out.printf(
-      "Porcentaje de alumnos en Base de Datos: %.1f%%\n",
-      porcentajeBaseDatos
-    );
+    imprimirPorcentaje("Programación", programacionAlumnos, totalAlumnos);
+    imprimirPorcentaje("Entornos de Desarrollo", entornosAlumnos, totalAlumnos);
+    imprimirPorcentaje("Base de Datos", baseDatosAlumnos, totalAlumnos);
 
     scanner.close();
+  }
+
+  public static void imprimirPorcentaje(
+    String asignatura,
+    int alumnos,
+    int total
+  ) {
+    double porcentaje = (double) alumnos / total * 100;
+    System.out.printf(
+      "Porcentaje de alumnos en %s: %.1f%%\n",
+      asignatura,
+      porcentaje
+    );
   }
 }

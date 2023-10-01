@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  * Pseudocódigo:
- * - Pedir base12
+ * - Pedir base
  * - Pedir altura
  * - Comprobar que base y altura son mayores que 0
  * - Calcular área
